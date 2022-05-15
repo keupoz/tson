@@ -44,6 +44,22 @@ export abstract class JsonElement {
     return this
   }
 
+  public getAsBoolean (): boolean {
+    throw new Error('Unsupported operation')
+  }
+
+  public getAsNumber (): number {
+    throw new Error('Unsupported operation')
+  }
+
+  public getAsInteger (): number {
+    return this.getAsNumber() | 0
+  }
+
+  public getAsString (): string {
+    throw new Error('Unsupported operation')
+  }
+
   public toJSON (): string {
     return JSON.stringify(this.serialize())
   }

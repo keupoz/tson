@@ -27,7 +27,7 @@ export class JsonPrimitive extends JsonElement {
     return typeof this.value === 'string'
   }
 
-  public getAsBoolean (): boolean {
+  public override getAsBoolean (): boolean {
     switch (typeof this.value) {
       case 'boolean': return this.value
       case 'string': return this.value.toLowerCase() === 'true'
@@ -35,7 +35,7 @@ export class JsonPrimitive extends JsonElement {
     }
   }
 
-  public getAsNumber (): number {
+  public override getAsNumber (): number {
     switch (typeof this.value) {
       case 'number': return this.value
       case 'string': return parseFloat(this.value)
@@ -43,11 +43,7 @@ export class JsonPrimitive extends JsonElement {
     }
   }
 
-  public getAsInteger (): number {
-    return this.getAsNumber() | 0
-  }
-
-  public getAsString (): string {
+  public override getAsString (): string {
     return typeof this.value === 'string' ? this.value : String(this.value)
   }
 
