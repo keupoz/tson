@@ -1,6 +1,3 @@
 {
-  "extends": "@keupoz/typescript-config/tsconfig.json",
-  "compilerOptions": {
-    "lib": ["es2017"]
-  }
+  "extends": "@keupoz/typescript-config/tsconfig.json"
 }

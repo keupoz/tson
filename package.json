@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/keupoz/tson#readme",
   "devDependencies": {
-    "@keupoz/typescript-config": "^1.4.0",
+    "@keupoz/typescript-config": "^1.5.0",
     "ts-standard": "^11.0.0",
     "typescript": "^4.6.4"
   }
